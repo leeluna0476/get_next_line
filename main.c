@@ -6,7 +6,7 @@
 /*   By: seojilee <seojilee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 11:39:40 by seojilee          #+#    #+#             */
-/*   Updated: 2025/01/22 11:45:17 by seojilee         ###   ########.fr       */
+/*   Updated: 2025/01/22 11:51:38 by seojilee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #include <fcntl.h>
 #include <unistd.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 int	main(int argc, char **argv)
 {
@@ -35,6 +36,7 @@ int	main(int argc, char **argv)
 	while (line)
 	{
 		printf("next_line: %s\n", line);
+		free(line);
 		line = get_next_line(fd);
 	}
 	close(fd);
