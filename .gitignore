@@ -1,3 +1,4 @@
 *.o
 *.d
 get_next_line
+test.c
