@@ -2,7 +2,7 @@
 
 NAME=get_next_line
 CC=cc
-CFLAGS=-Wall -Wextra -Werror -MMD -MP -MF $(DEPS_DIR)/$*.d
+CFLAGS=-Wall -Wextra -Werror -fsanitize=address -MMD -MP -MF $(DEPS_DIR)/$*.d
 SRCS= \
 	 main.c \
 	 get_next_line.c \
@@ -19,7 +19,7 @@ DEPS=$(addprefix $(DEPS_DIR)/, $(SRCS:.c=.d))
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(LINK.o) $(OUTPUT_OPTION) $(OBJS)
+	$(LINK.c) $(OUTPUT_OPTION) $(OBJS)
 
 $(OBJS_DIR)/%.o: %.c | $(OBJS_DIR) $(DEPS_DIR)
 	$(COMPILE.c) $(OUTPUT_OPTION) $<
