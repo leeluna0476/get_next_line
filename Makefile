@@ -2,10 +2,11 @@
 
 NAME=get_next_line
 CC=cc
-CFLAGS=-Wall -Wextra -Werror -fsanitize=address -MMD -MP -MF $(DEPS_DIR)/$*.d
+CFLAGS=-Wall -Wextra -Werror -g3 -fsanitize=address -MMD -MP -MF $(DEPS_DIR)/$*.d
 SRCS= \
 	 main.c \
 	 get_next_line.c \
+	 get_next_line_utils.c \
 
 RM=rm -fr
 

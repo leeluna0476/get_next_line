@@ -6,7 +6,7 @@
 /*   By: seojilee <seojilee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 11:39:12 by seojilee          #+#    #+#             */
-/*   Updated: 2025/01/23 10:22:24 by seojilee         ###   ########.fr       */
+/*   Updated: 2025/01/29 14:45:04 by seojilee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,20 @@
 #  define BUFSIZE 64
 # endif
 
+# include <stdlib.h>
+
+/*
+ * The initial size must be 1.
+ */
+struct	s_vector
+{
+	char	*line;
+	size_t	size;
+};
+
+void	*ft_realloc(void *ptr, size_t old_size, size_t new_size);
+void	expand_vector(struct s_vector *vec);
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 char	*get_next_line(int fd);
 
 #endif
