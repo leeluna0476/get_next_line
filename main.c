@@ -6,7 +6,7 @@
 /*   By: seojilee <seojilee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 11:39:40 by seojilee          #+#    #+#             */
-/*   Updated: 2025/01/22 11:51:38 by seojilee         ###   ########.fr       */
+/*   Updated: 2025/01/29 14:25:48 by seojilee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int	main(int argc, char **argv)
 	line = get_next_line(fd);
 	while (line)
 	{
-		printf("next_line: %s\n", line);
+		printf("%s", line);
 		free(line);
 		line = get_next_line(fd);
 	}
