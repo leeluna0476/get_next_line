@@ -6,7 +6,7 @@
 /*   By: seojilee <seojilee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 11:39:05 by seojilee          #+#    #+#             */
-/*   Updated: 2025/01/29 14:45:13 by seojilee         ###   ########.fr       */
+/*   Updated: 2025/01/29 14:50:40 by seojilee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,8 @@ static ssize_t	read_str(int fd, char buf[])
 	return (read_size);
 }
 
-static ssize_t	copy_characters(char buf[], struct s_vector *vec, size_t line_gap)
+static ssize_t
+	copy_characters(char buf[], struct s_vector *vec, size_t line_gap)
 {
 	size_t	i;
 
@@ -69,8 +70,8 @@ char	*get_next_line(int fd)
 		if (!buf[0] && read_str(fd, buf) == -1)
 			free(vec.line);
 		if (!buf[0])
-			break;
-		copied_now= copy_characters(buf, &vec, accumulated);
+			break ;
+		copied_now = copy_characters(buf, &vec, accumulated);
 		if (copied_now == -1)
 			return (vec.line);
 		buf[0] = '\0';
