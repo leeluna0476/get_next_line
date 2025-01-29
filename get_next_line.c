@@ -6,7 +6,7 @@
 /*   By: seojilee <seojilee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 11:39:05 by seojilee          #+#    #+#             */
-/*   Updated: 2025/01/29 14:52:31 by seojilee         ###   ########.fr       */
+/*   Updated: 2025/01/29 15:03:12 by seojilee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ static ssize_t	read_str(int fd, char buf[])
 
 static ssize_t	copy_characters(char buf[], t_vector *vec, size_t line_gap)
 {
-	size_t	i;
+	ssize_t	i;
 
 	i = 0;
 	while (buf[i])
