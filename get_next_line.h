@@ -6,7 +6,7 @@
 /*   By: seojilee <seojilee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 11:39:12 by seojilee          #+#    #+#             */
-/*   Updated: 2025/01/29 14:45:04 by seojilee         ###   ########.fr       */
+/*   Updated: 2025/01/29 14:54:07 by seojilee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,11 @@
 /*
  * The initial size must be 1.
  */
-struct	s_vector
+typedef struct s_vector
 {
 	char	*line;
 	size_t	size;
-};
+}	t_vector;
 
 void	*ft_realloc(void *ptr, size_t old_size, size_t new_size);
 void	expand_vector(struct s_vector *vec);

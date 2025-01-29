@@ -6,7 +6,7 @@
 /*   By: seojilee <seojilee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/23 11:55:39 by seojilee          #+#    #+#             */
-/*   Updated: 2025/01/29 14:46:01 by seojilee         ###   ########.fr       */
+/*   Updated: 2025/01/29 14:52:17 by seojilee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void	*ft_realloc(void *ptr, size_t old_size, size_t new_size)
 	return (new_ptr);
 }
 
-void	expand_vector(struct s_vector *vec)
+void	expand_vector(t_vector *vec)
 {
 	size_t	new_size;
 
