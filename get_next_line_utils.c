@@ -6,7 +6,7 @@
 /*   By: seojilee <seojilee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/23 11:55:39 by seojilee          #+#    #+#             */
-/*   Updated: 2025/01/29 14:52:17 by seojilee         ###   ########.fr       */
+/*   Updated: 2025/01/30 15:24:40 by seojilee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,9 +45,8 @@ void	*ft_realloc(void *ptr, size_t old_size, size_t new_size)
 
 void	expand_vector(t_vector *vec)
 {
-	size_t	new_size;
+	const size_t	new_size = vec->size << 1;
 
-	new_size = vec->size << 1;
 	vec->line = ft_realloc(vec->line, vec->size, new_size);
 	if (!vec->line)
 		vec->size = 0;
@@ -67,10 +66,9 @@ static size_t	ft_strlen(const char *s)
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	size_t	src_len;
-	size_t	cpsize;
+	const size_t	src_len = ft_strlen(src);
+	size_t			cpsize;
 
-	src_len = ft_strlen(src);
 	if (dstsize != 0)
 	{
 		cpsize = dstsize - 1;
